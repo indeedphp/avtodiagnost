@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Алматы Автоэлектрика, диагностика, заправка кондиционеров и их ремонт.">
-  <meta name="keywords" content="Автоэлектрик, Автоэлектрик Алмата, ремонт и диагностика автомобиля">
+  <meta name="description" content="Автоэлектрики и автомеханики осуществляют выезд по городу Алматы для ремонта, запуска и диагностики вашего автомобиля, приедем быстро сделаем все профессионально.">
+  <meta name="keywords" content="Автоэлектрик, Автоэлектрик Алматы, выезд ремонт автомобиля">
   <meta name="robots" content="index,follow">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <title>Автоэлектрик</title>
   <link href="bootstrap.min.css" rel="stylesheet">
 
@@ -42,8 +43,8 @@
             <div class="card-header py-3 " style = "background-color : #FFD800";>
               <h4 class="my-0 fw-normal ">Мы возле автоцентра Бакорда</h4>
             </div>
-            <div class="card-body p-0 py-3  ">
-              <img src="bakorda.webp" height="260" class="rounded  mr-3">
+            <div class="p-0 py-3 card-body">
+              <img  src="bakorda.webp" height="260" class="rounded  mr-3">
               <table class="table table-striped ">
                 <thead>
                   <tr><th ><h5 class="text-center">Наш адрес в Алматы</h5></th></tr>
@@ -138,7 +139,7 @@
       <div class="card-header py-3 " style = "background-color : #FFD800"; >
        <h4 class="my-0 fw-normal ">Диагностика и ремонт</h4>
      </div>
-     <div class="card-body p-0 py-3  ">
+     <div class="card-body p-0 py-3 ">
       <img src="skaner.webp" height="260" class="rounded  mr-3 "  >
       <table class="table table-striped ">
         <thead>
@@ -174,12 +175,52 @@
          <tr><td>Заменим и отремонтируем нужное</td> </tr>
        </tbody>
      </table>
-     Автомобильный кондиционер это сложное устройство, в котором пересекаютя электричество, механика и гидравлика, мы занимаемся не просто простой заправкой но и поиском, а так же устранением различных неисправностей.
+    Автомобильный кондиционер это сложное устройство, в котором пересекаютя электричество, механика и гидравлика, мы занимаемся не просто простой заправкой но и поиском, а так же устранением различных неисправностей.
+   </div>
  </div>
 </div>
 
 </div>
 </div>
+
+
+<div class="col p-1">
+  <div class="card mb-4 rounded-3 shadow-sm border-dark ">
+    <div class="card-header py-3  " style = "background-color : #FFD800"; >
+      <h4 class="my-0 fw-normal">Сервис на карте</h4>
+
+    </div>
+    <div class="card-body p-0 py-3  ">
+      <div id="map1" style="width: 100%Ы; height: 400px"></div>
+   </div>
+ </div>
+</div>
+
+
+
+
+
+
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU"></script> <!-- старый яндекс апи2 -->
+    <script> // в скрипте создаем карту
+        function init() {  // создаем функцию
+         const map = new ymaps.Map('map1', { // к ид мап1 привязываем координаты и увеличение
+          center: [43.262489, 76.856009],
+          zoom: 10
+      });
+         let placemark = new ymaps.Placemark([43.262489, 76.856009],{},{
+   iconLayout: 'default#image', // говорим что метка будет своя
+        iconImageHref: 'key.png',  // адресс метки
+        iconImageSize: [32, 32],  // размер
+        iconImageOffset: [-16, -16], // коррекция положения
+
+          });
+map.geoObjects.add(placemark); // отображаем метку
+     }
+     ymaps.ready (init); // вызываем функцию
+ </script>
+
 
 </main>
 <footer>
